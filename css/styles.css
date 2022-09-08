@@ -12,6 +12,7 @@
     --client-icon-color : rgba(33, 150, 243, 1);
     --text-people-color:rgba(117, 117, 117, 1);
     --drop-top-color :rgba(255, 255, 255, 1);
+    --new-hm5-color: rgba(47, 48, 58, 0.8);
 
     --main-font: 'Roboto',sans-serif;
     --secondary-font : 'Raleway',sans-serif;
@@ -32,7 +33,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:rgb(255, 240, 211) ;
+    background-color:rgba(0, 0, 0, 0.2) ;
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -47,9 +48,36 @@ body {
     width: 528px;
     height: 521px;
  
-    background-color:rgba(255, 255, 255, 1);
+    background-color:var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
-
+.link.current::after {
+    position: absolute;
+    content:"";
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4px;
+    display: block;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+.link {
+    position: relative;
+    color: var(--article-color);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  
+    display: inline-block;
+}
+.site-nav .link.current {
+    color: var(--accent-color);
+  }
+.site-nav .item {
+    position: relative;
+  }
 /*Утиліт*/
 .contacts-page {
     display: flex ;
@@ -350,8 +378,11 @@ h1,h2,h3 { margin: 0px;
     padding: 0px;
 }
 .our-list .item {
+    position: relative;
+
     display: block;
     list-style: none;
+
 }
 .our-list .item {
     margin-right: 0px;
@@ -362,7 +393,28 @@ h1,h2,h3 { margin: 0px;
 .blocks {
     display: block;
 }
-
+.distext {
+    color: var(--primary-white-color);
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+}
+.product {
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color:var(--new-hm5-color);
+}
 /*Team*/
 
 .fone {

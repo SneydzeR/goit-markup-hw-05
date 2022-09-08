@@ -104,13 +104,22 @@
             <ul class="our-list">
               <li class="item">
                 <img class="blocks" src="images/img.jpg" alt="Фото верстки" width="370">
+                <div class="product">
+                    <p class="distext">Десктопні додатки</p>
+                </div>
               </li>
              <li class="item">
               <img class="blocks" src="images/img1.jpg" alt ="Розробка дизайна для телефона" width="370">
+              <div class="product">
+                <p class="distext">Мобільні додатки</p>
+              </div>
              </li>
              <li class="item">
               <img class="blocks" src="images/img2.jpg" alt="Вибір відтінку кольору на планшеті" width="370">
-             </li>
+            <div class="product">
+                <p class="distext">Дизайнерські рішення</p>
+            </div> 
+            </li>
             </ul>
             </div>
         </section>
@@ -343,7 +352,12 @@
     </div>
     <div class="backdrop is-hidden"data-modal>
         <div class="modal">
-    <button data-modal-close>Закрити</button>
+    <button data-modal-close>
+        <svg class="modal-close-icon" width="18px" hight="18px">
+            <use href="./images/icons.svg#icon-close"></use>
+
+        </svg>
+    </button>
         </div>
     </div>
      <script src="./js/modal.js"></script>
